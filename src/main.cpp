@@ -78,6 +78,7 @@ void setup()
 	iotWebConf.setConfigSavedCallback(&configSaved);
 	iotWebConf.setWifiConnectionCallback(&wifiConnected);
 	iotWebConf.setupUpdateServer(&httpUpdater);
+	iotWebConf.setConfigPin(D5);
 
 	boolean validConfig = iotWebConf.init();
 	if (!validConfig)
